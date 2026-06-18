@@ -5,7 +5,7 @@ import sqlite3
 client = OpenAI(base_url=OPENAI_ENDPOINT, api_key=OPENAI_API_KEY)
 
 def generate_question(category):
-    response = client.chat.completions(
+    response = client.chat.completions.create(
         model = MODEL,
         messages = [
             {
