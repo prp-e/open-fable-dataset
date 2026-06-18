@@ -51,6 +51,10 @@ def generate_question(category):
         model = MODEL,
         messages = [
             {
+                "role" : "system",
+                "content" : SYSTEM_PROMPT
+            },
+            {
                 "role" : "user",
                 "content" : (
                     f"Act as a professional question generator. Generate a unique {fmt} "
