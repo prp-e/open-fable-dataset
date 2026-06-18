@@ -94,11 +94,11 @@ def generate_and_insert(category):
     value = generate_value(question, answer, category)
     insert_question(value)
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    for i in range(100):
-        category = "programming (C++)"
-        generate_and_insert(category)
-        time.sleep(5)
+#     for i in range(100):
+#         category = "programming (C++)"
+#         generate_and_insert(category)
+#         time.sleep(5)
     
-    conn.close()
+#     conn.close()
