@@ -84,7 +84,15 @@ def insert_question(data_dict):
         conn.rollback()
 
 def generate_and_insert(category):
-    pass
+
+    question = generate_question(category)
+    print("Generated The Question")
+
+    answer = generate_answer(question)
+    print("Generated The Answer")
+
+    value = generate_value(question, answer, category)
+    insert_question(value)
 
 if __name__ == "__main__":
     print("Hello!")
