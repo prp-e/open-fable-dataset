@@ -14,7 +14,7 @@ def generate_question(category):
             },
             {
                 "role" : "user",
-                "content" : f"Generate a master's degree problem in the field of {category}"
+                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown."
             }
         ]
     )
