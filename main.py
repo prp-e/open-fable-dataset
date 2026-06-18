@@ -33,9 +33,10 @@ def generate_question(category):
             },
             {
                 "role" : "user",
-                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown."
+                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown. seed: {random.randint(1_000_000, 9_999_999)}"
             }
-        ]
+        ],
+        temperature = 1.5
     )
 
     return response.choices[0].message.content
