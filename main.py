@@ -52,7 +52,12 @@ def generate_question(category):
         messages = [
             {
                 "role" : "user",
-                "content" : f"Generate a problem or question in the field of {category}, only the problem/question is needed, no markdown."
+                "content" : (
+                    f"Act as a professional question generator. Generate a unique {fmt} "
+                    f"problem or question in the field of {category}. Specifically focus on "
+                    f"{subtopic} tailored for {audience}. Provide ONLY the problem/question, "
+                    f"no markdown, no intro, no wrap-up."
+                )
             }
         ],
         temperature = 1.5
