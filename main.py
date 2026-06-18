@@ -101,3 +101,5 @@ if __name__ == "__main__":
         category = "programming"
         generate_and_insert(category)
         time.sleep(5)
+    
+    conn.close()
