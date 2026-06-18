@@ -83,5 +83,8 @@ def insert_question(data_dict):
         print(f"An error occurred: {e}")
         conn.rollback()
 
+def generate_and_insert(category):
+    pass
+
 if __name__ == "__main__":
     print("Hello!")
