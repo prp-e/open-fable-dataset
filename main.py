@@ -24,19 +24,13 @@ conn.commit()
 client = OpenAI(base_url=OPENAI_ENDPOINT, api_key=OPENAI_API_KEY)
 
 def generate_question(category):
-    internal_id = random.randint(1_000_000, 9_999_999)
-    print(internal_id)
 
     response = client.chat.completions.create(
         model = MODEL,
         messages = [
             {
-                "role" : "system",
-                "content" : f"{SYSTEM_PROMPT}-{random.randint(0, 999_999_999_999)}"
-            },
-            {
                 "role" : "user",
-                "content" : f"Generate a problem or question in the field of {category}, only the problem/question is needed, no markdown. Internal ID: {internal_id}"
+                "content" : f"Generate a problem or question in the field of {category}, only the problem/question is needed, no markdown."
             }
         ],
         temperature = 1.5
