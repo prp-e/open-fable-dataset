@@ -54,7 +54,7 @@ def generate_answer(question):
             },
             {
                 "role" : "user",
-                "content" : f"The following is our problem/question: {question}\n Only answer it. If it needs coding and the language is not specified, use python."
+                "content" : f"The following is our problem/question: {question}\n Only answer it. If it needs coding and the language is not specified, use python and follow the conventions for a clean re-usable code."
             }
         ]
     )
