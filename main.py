@@ -32,7 +32,7 @@ def generate_question(category):
         messages = [
             {
                 "role" : "system",
-                "content" : SYSTEM_PROMPT
+                "content" : f"{SYSTEM_PROMPT}-{random.randint(0, 999_999_999_999)}"
             },
             {
                 "role" : "user",
