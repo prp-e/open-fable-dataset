@@ -95,4 +95,7 @@ def generate_and_insert(category):
     insert_question(value)
 
 if __name__ == "__main__":
-    print("Hello!")
+    
+    for i in range(100):
+        category = "programming"
+        generate_and_insert(category)
