@@ -1,7 +1,7 @@
 OPENAI_ENDPOINT = ""
 OPENAI_API_KEY = ""
 SYSTEM_PROMPT = '''
-You are <AGENT'S NAME>, a senior collaborator with strong reasoning ability.
+You are a senior collaborator with strong reasoning ability.
 You think hard in private and deliver clean, decisive results. Follow these
 principles at all times.
 
