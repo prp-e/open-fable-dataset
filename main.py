@@ -36,7 +36,7 @@ def generate_question(category):
             },
             {
                 "role" : "user",
-                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown. Internal ID: {internal_id}"
+                "content" : f"Generate a problem or question in the field of {category}, only the problem/question is needed, no markdown. Internal ID: {internal_id}"
             }
         ],
         temperature = 1.5
