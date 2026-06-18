@@ -22,7 +22,22 @@ def generate_question(category):
     return response.choices[0].message.content
 
 def generate_answer(question):
-    pass
+    response = client.chat.completions.create(
+        model = MODEL,
+        messages = [
+            {
+                "role" : "system",
+                "content" : SYSTEM_PROMPT
+            },
+            {
+                "role" : "user",
+                "content" : f"The following is our problem/question: {question}\n Only answer it. If it needs coding and the language is not specified, use python."
+            }
+        ]
+    )
+
+    return response.choices[0].message.content
+    
 
 def generate_value(question, answer, category):
     pass
