@@ -43,6 +43,10 @@ def generate_question(category):
         "audiences": ["an expert", "a researcher", "a senior engineer", "a student"],
     }
 
+    subtopic = random.choice(varieties["subtopics"])
+    fmt = random.choice(varieties["formats"])
+    audience = random.choice(varieties["audiences"])
+
     response = client.chat.completions.create(
         model = MODEL,
         messages = [
