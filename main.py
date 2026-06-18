@@ -103,7 +103,7 @@ def generate_and_insert(category):
 if __name__ == "__main__":
     
     for i in range(100):
-        category = "programming"
+        category = "programming (C++)"
         generate_and_insert(category)
         time.sleep(5)
     
