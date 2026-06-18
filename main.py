@@ -62,3 +62,23 @@ def generate_value(question, answer, category):
         "question" : question,
         "answer" : answer
     }
+
+def insert_question(data_dict):
+    query = """
+        INSERT INTO questions (category, question, answer)
+        VALUES (?, ?, ?)
+    """
+    
+    values = (
+        data_dict.get("category"),
+        data_dict.get("question"),
+        data_dict.get("answer"),
+    )
+
+    try:
+        cursor.execute(query, values)
+        conn.commit()
+        print("Data inserted successfully!")
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+        conn.rollback()
