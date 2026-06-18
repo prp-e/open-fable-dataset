@@ -19,7 +19,7 @@ def generate_question(category):
         ]
     )
 
-    return response
+    return response.choices[0].message.content
 
 def generate_answer(question):
     pass
