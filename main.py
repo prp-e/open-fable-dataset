@@ -100,3 +100,4 @@ if __name__ == "__main__":
     for i in range(100):
         category = "programming"
         generate_and_insert(category)
+        time.sleep(5)
