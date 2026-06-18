@@ -68,7 +68,7 @@ def insert_question(data_dict):
         INSERT INTO questions (category, question, answer)
         VALUES (?, ?, ?)
     """
-    
+
     values = (
         data_dict.get("category"),
         data_dict.get("question"),
@@ -82,3 +82,6 @@ def insert_question(data_dict):
     except sqlite3.Error as e:
         print(f"An error occurred: {e}")
         conn.rollback()
+
+if __name__ == "__main__":
+    print("Hello!")
