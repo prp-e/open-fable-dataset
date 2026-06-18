@@ -2,6 +2,23 @@ from config import *
 from openai import OpenAI
 import sqlite3
 
+DB_NAME = "database.db"
+conn = sqlite3.connect(DB_NAME)
+cursor = conn.cursor()
+
+# Create the table with an autoincrementing primary key
+cursor.execute(
+    """
+    CREATE TABLE IF NOT EXISTS questions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        category TEXT,
+        question TEXT,
+        answer TEXT
+    )
+"""
+)
+conn.commit()
+
 client = OpenAI(base_url=OPENAI_ENDPOINT, api_key=OPENAI_API_KEY)
 
 def generate_question(category):
