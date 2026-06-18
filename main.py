@@ -25,6 +25,24 @@ client = OpenAI(base_url=OPENAI_ENDPOINT, api_key=OPENAI_API_KEY)
 
 def generate_question(category):
 
+    varieties = {
+        "subtopics": [
+            "advanced concepts",
+            "real-world case studies",
+            "historical paradoxes",
+            "counter-intuitive scenarios",
+            "industry-specific applications",
+            "theoretical fringe cases",
+        ],
+        "formats": [
+            "multiple-choice-style setup",
+            "open-ended thought experiment",
+            "calculation-heavy challenge",
+            "conceptual design problem",
+        ],
+        "audiences": ["an expert", "a researcher", "a senior engineer", "a student"],
+    }
+
     response = client.chat.completions.create(
         model = MODEL,
         messages = [
