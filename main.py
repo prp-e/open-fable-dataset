@@ -24,6 +24,9 @@ conn.commit()
 client = OpenAI(base_url=OPENAI_ENDPOINT, api_key=OPENAI_API_KEY)
 
 def generate_question(category):
+    internal_id = random.randint(1_000_000, 9_999_999)
+    print(internal_id)
+
     response = client.chat.completions.create(
         model = MODEL,
         messages = [
@@ -33,7 +36,7 @@ def generate_question(category):
             },
             {
                 "role" : "user",
-                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown. seed: {random.randint(1_000_000, 9_999_999)}"
+                "content" : f"Generate a master's degree problem or question in the field of {category}, only the problem/question is needed, no markdown. Internal ID: {internal_id}"
             }
         ],
         temperature = 1.5
@@ -97,11 +100,11 @@ def generate_and_insert(category):
     value = generate_value(question, answer, category)
     insert_question(value)
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    for i in range(100):
-        category = "programming"
-        generate_and_insert(category)
-        time.sleep(5)
+#     for i in range(100):
+#         category = "programming"
+#         generate_and_insert(category)
+#         time.sleep(5)
     
-    conn.close()
+#     conn.close()
