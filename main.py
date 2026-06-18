@@ -40,4 +40,8 @@ def generate_answer(question):
     
 
 def generate_value(question, answer, category):
-    pass
+    return {
+        "category" : category,
+        "question" : question,
+        "answer" : answer
+    }
