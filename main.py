@@ -40,7 +40,7 @@ def generate_question(category):
             "calculation-heavy challenge",
             "conceptual design problem",
         ],
-        "audiences": ["an expert", "a researcher", "a senior"],
+        "audiences": ["an expert", "a researcher", "a senior", "a university professor"],
     }
 
     subtopic = random.choice(varieties["subtopics"])
