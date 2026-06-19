@@ -47,6 +47,13 @@ def generate_question(category):
     fmt = random.choice(varieties["formats"])
     audience = random.choice(varieties["audiences"])
 
+    prompt = (
+                    f"Act as a professional question generator. Generate a unique {fmt} "
+                    f"problem or question in the field of {category}. Specifically focus on "
+                    f"{subtopic} tailored for {audience}. Provide ONLY the problem/question, "
+                    f"no markdown, no intro, no wrap-up."
+            )
+
     response = client.chat.completions.create(
         model = MODEL,
         messages = [
@@ -56,12 +63,7 @@ def generate_question(category):
             },
             {
                 "role" : "user",
-                "content" : (
-                    f"Act as a professional question generator. Generate a unique {fmt} "
-                    f"problem or question in the field of {category}. Specifically focus on "
-                    f"{subtopic} tailored for {audience}. Provide ONLY the problem/question, "
-                    f"no markdown, no intro, no wrap-up."
-                )
+                "content" : prompt
             }
         ],
         temperature = 1.5
