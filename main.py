@@ -69,7 +69,7 @@ def generate_question(category):
         temperature = 1.5
     )
 
-    return response.choices[0].message.content
+    return response.choices[0].message.content, prompt
 
 def generate_answer(question):
     response = client.chat.completions.create(
