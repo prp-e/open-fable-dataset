@@ -123,7 +123,7 @@ def generate_and_insert(category):
     question = generate_question(category)
     print("Generated The Question")
 
-    answer = generate_answer(question)
+    answer = generate_answer(question[0])
     print("Generated The Answer")
 
     value = generate_value(question[0], answer, category, question[1])
