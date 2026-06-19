@@ -100,11 +100,12 @@ def generate_value(question, answer, category, prompt):
 def insert_question(data_dict):
     query = """
         INSERT INTO questions (category, question, answer)
-        VALUES (?, ?, ?)
+        VALUES (?, ?, ?, ?)
     """
 
     values = (
         data_dict.get("category"),
+        data_dict.get("prompt"),
         data_dict.get("question"),
         data_dict.get("answer"),
     )
@@ -125,7 +126,7 @@ def generate_and_insert(category):
     answer = generate_answer(question)
     print("Generated The Answer")
 
-    value = generate_value(question, answer, category)
+    value = generate_value(question[0], answer, category, question[1])
     insert_question(value)
 
 if __name__ == "__main__":
