@@ -14,6 +14,7 @@ cursor.execute(
     CREATE TABLE IF NOT EXISTS questions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         category TEXT,
+        prompt TEXT,
         question TEXT,
         answer TEXT
     )
