@@ -54,7 +54,8 @@ def generate_question(category):
                     f"no markdown, no intro, no wrap-up."
             )
 
-    response = client.chat.completions.create(
+    try:
+        response = client.chat.completions.create(
         model = MODEL,
         messages = [
             {
@@ -65,24 +66,29 @@ def generate_question(category):
         temperature = 1.5
     )
 
-    return response.choices[0].message.content, prompt
+        return response.choices[0].message.content, prompt
+    except:
+        return "", ""
 
 def generate_answer(question):
-    response = client.chat.completions.create(
-        model = ANSWERING_MODEL,
-        messages = [
-            {
-                "role" : "system",
-                "content" : SYSTEM_PROMPT
-            },
-            {
-                "role" : "user",
-                "content" : f"The following is our problem/question: {question}\n Only answer it without wrap ups."
-            }
-        ]
-    )
+    try:
+        response = client.chat.completions.create(
+            model = ANSWERING_MODEL,
+            messages = [
+                {
+                    "role" : "system",
+                    "content" : SYSTEM_PROMPT
+                },
+                {
+                    "role" : "user",
+                    "content" : f"The following is our problem/question: {question}\n Only answer it without wrap ups."
+                }
+            ]
+        )
 
-    return response.choices[0].message.content
+        return response.choices[0].message.content
+    except:
+        return ""
     
 
 def generate_value(question, answer, category, prompt):
