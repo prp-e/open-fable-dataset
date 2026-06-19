@@ -36,7 +36,7 @@ def generate_question(category):
             "theoretical fringe cases",
         ],
         "formats": [
-            "multiple-choice-style setup",
+            "theoretical",
             "calculation-heavy challenge",
             "conceptual design problem",
         ],
