@@ -36,11 +36,10 @@ def generate_question(category):
         ],
         "formats": [
             "multiple-choice-style setup",
-            "open-ended thought experiment",
             "calculation-heavy challenge",
             "conceptual design problem",
         ],
-        "audiences": ["an expert", "a researcher", "a senior engineer", "a student"],
+        "audiences": ["an expert", "a researcher", "a senior"],
     }
 
     subtopic = random.choice(varieties["subtopics"])
