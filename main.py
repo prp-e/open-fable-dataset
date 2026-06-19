@@ -99,7 +99,7 @@ def generate_value(question, answer, category, prompt):
 
 def insert_question(data_dict):
     query = """
-        INSERT INTO questions (category, question, answer)
+        INSERT INTO questions (category, prompt, question, answer)
         VALUES (?, ?, ?, ?)
     """
 
