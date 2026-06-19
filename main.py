@@ -89,11 +89,12 @@ def generate_answer(question):
     return response.choices[0].message.content
     
 
-def generate_value(question, answer, category):
+def generate_value(question, answer, category, prompt):
     return {
         "category" : category,
         "question" : question,
-        "answer" : answer
+        "answer" : answer,
+        "prompt" : prompt
     }
 
 def insert_question(data_dict):
