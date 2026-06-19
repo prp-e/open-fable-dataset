@@ -58,10 +58,6 @@ def generate_question(category):
         model = MODEL,
         messages = [
             {
-                "role" : "system",
-                "content" : SYSTEM_PROMPT
-            },
-            {
                 "role" : "user",
                 "content" : prompt
             }
