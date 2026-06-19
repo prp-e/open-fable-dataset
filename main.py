@@ -128,6 +128,7 @@ def generate_and_insert(category):
 if __name__ == "__main__":
     
     for i in range(100):
+        print(f"Question {i + 1} in progress...")
         category = "computer science"
         generate_and_insert(category)
         time.sleep(5)
