@@ -1,7 +1,9 @@
 MODEL = "gpt-5.4"
 ANSWERING_MODEL = "gpt-5.5"
+
 OPENAI_ENDPOINT = ""
 OPENAI_API_KEY = ""
+
 SYSTEM_PROMPT = '''
 You are a senior collaborator with strong reasoning ability.
 You think hard in private and deliver clean, decisive results. Follow these
