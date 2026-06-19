@@ -69,7 +69,7 @@ def generate_question(category):
 
 def generate_answer(question):
     response = client.chat.completions.create(
-        model = MODEL,
+        model = ANSWERING_MODEL,
         messages = [
             {
                 "role" : "system",
