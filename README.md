@@ -25,3 +25,5 @@ First, you need python 3.10 and above. Then:
 ## Models
 
 ## Final Goal
+
+A tool whci helps you distill any big model any time, anywhere. 
