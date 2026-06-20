@@ -6,6 +6,16 @@ This repository is an attempt to generate a dataset in order to make open source
 
 ## How to execute
 
+First, you need python 3.10 and above. Then:
+
+1. Clone this repository.
+2. Install requirements by running `pip install -r requirements.txt`
+3. Move `config.py.example` to `config.py` and modify it as needed (see [configuration](#configuration))
+4. Edit `main.py` and find your own category of interest. 
+5. Run `main.py` and wait for it to start working. 
+
+### Configuration
+
 ## Models
 
 ## Final Goal
