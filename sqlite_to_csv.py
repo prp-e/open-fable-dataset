@@ -18,3 +18,6 @@ def sqlite_to_csv(db_path: str, table_name: str, csv_path: str) -> None:
     finally:
         if "conn" in locals():
             conn.close()
+
+if __name__ == "__main__":
+    pass
