@@ -135,7 +135,7 @@ if __name__ == "__main__":
     
     for i in range(100):
         print(f"Question {i + 1} in progress...")
-        category = "linux"
+        category = "web development"
         generate_and_insert(category)
         time.sleep(5)
     
