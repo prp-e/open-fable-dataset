@@ -16,6 +16,12 @@ First, you need python 3.10 and above. Then:
 
 ### Configuration
 
+1. `MODEL` : The model you use in order to generate questions or problems.
+2. `ANSWERING_MODEL` : The model you may use to generate answers. It can be a better model or the same as previous one. 
+3. `SYSTEM_PROMPT` : It comes from [This project](https://github.com/prp-e/open-fable)
+4. `OPENAI_ENDPOINT` : It can be original OpenAI's base url or can be anything else. I suggest using [this one](https://freemodel.dev/invite/FRE-c3b7b75e) to get a good amount of free usage on GPT 5.5 or 5.4
+5. `OPENAIP_API_KEY` : API Key you obtain from the OpenAI compatible providers.
+
 ## Models
 
 ## Final Goal
